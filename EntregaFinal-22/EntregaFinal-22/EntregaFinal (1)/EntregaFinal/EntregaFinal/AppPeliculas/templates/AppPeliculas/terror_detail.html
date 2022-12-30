@@ -1,0 +1,19 @@
+{% extends 'AppPeliculas/padre.html' %}
+
+{%load static%}
+
+{% block contenidoquecambia %}
+
+<br>
+<center>
+    <ul>
+        <b>Nombre</b>: {{terror.mas_vistas}}
+        <br>
+        <b>Taquilla</b>: {{terror.taquilla}} USD
+        <br>
+        <b>Crítica</b> : {{terror.critica_peliculas}}
+    </ul>
+
+<a href="{%url 'tlist'%}">Regresar</a>
+
+ {% endblock %} 

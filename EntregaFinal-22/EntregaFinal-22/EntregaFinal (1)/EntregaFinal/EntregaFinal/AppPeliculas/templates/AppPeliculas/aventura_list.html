@@ -1,0 +1,20 @@
+{% extends 'AppPeliculas/padre.html' %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+<br>
+<br>
+
+   <ul>
+        {% for aventura in object_list %}
+            <p>{{aventura.mas_vistas}}</p>
+            <p>
+                <a href="{% url 'avver' aventura.id %}">Ver</a>
+                <a href="{% url 'aveditar' aventura.id %}">Editar</a>
+                <a href="{% url 'aveliminar' aventura.id %}">Borrar</a>
+            </p>
+        {% endfor %}
+
+    </ul>
+{% endblock %}

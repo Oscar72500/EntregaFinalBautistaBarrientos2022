@@ -1,0 +1,30 @@
+{% extends 'AppPeliculas/padre.html' %}
+
+{%load static%}
+
+{% block contenidoquecambia %}
+<br>
+    <h1>
+        <center>
+            GÉNERO TERROR
+        </center>
+    </h1>
+
+    <br>
+
+    <body>
+        <center>
+        <form action=""    method="post">{% csrf_token %}
+            <table>
+                {{miFormulario.as_table}}
+            </table>
+            <input type="submit",value="Enviar">
+         </form>
+         <br>
+
+         <a class="navbar-brand" href="{% url 'tlist' %}">Lista de películas de terror</a>
+
+    </body>
+
+
+    {% endblock %}

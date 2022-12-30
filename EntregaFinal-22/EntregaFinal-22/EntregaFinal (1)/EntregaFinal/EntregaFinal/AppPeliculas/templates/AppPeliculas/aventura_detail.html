@@ -1,0 +1,19 @@
+{% extends 'AppPeliculas/padre.html' %}
+
+{%load static%}
+
+{% block contenidoquecambia %}
+
+<br>
+<center>
+    <ul>
+        <b>Nombre</b>: {{aventura.mas_vistas}}
+        <br>
+        <b>Taquilla</b>: {{aventura.taquilla}} USD
+        <br>
+        <b>Crítica</b> : {{aventura.critica_peliculas}}
+    </ul>
+
+<a href="{%url 'avlist'%}">Regresar</a>
+
+ {% endblock %} 

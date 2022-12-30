@@ -1,0 +1,20 @@
+{% extends 'AppPeliculas/padre.html' %}
+
+{%load static%}
+
+{% block contenidoquecambia %}
+<br>
+    <h1>
+        <center>
+        
+            Las mejores películas
+            <nav class="navbar navbar-light bg-light static-top">
+                <div class="container">  
+                    <a class="btn btn-primary" href="{% url 'terror' %}">TERROR</a>
+                    <a class="btn btn-primary" href="{% url 'accion' %}">ACCIÓN</a>
+                    <a class="btn btn-primary" href="{% url 'aventura' %}">AVENTURA</a>
+                </div>
+            </nav>           
+        </center>
+    </h1>
+{% endblock %}

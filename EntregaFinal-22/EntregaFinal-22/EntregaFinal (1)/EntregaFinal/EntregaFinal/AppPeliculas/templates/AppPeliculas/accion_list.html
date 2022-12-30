@@ -1,0 +1,21 @@
+{% extends 'AppPeliculas/padre.html' %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+<br>
+<br>
+
+    <ul>
+        {% for accion in object_list %}
+            <p>{{accion.mas_vistas}}</p>
+            <p>
+                <a href="{% url 'aver' accion.id %}">Ver</a>
+                <a href="{% url 'aeditar' accion.id %}">Editar</a>
+                <a href="{% url 'aeliminar' accion.id %}">Borrar</a>
+            </p>
+        {% endfor %}
+
+     </ul>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'AppPeliculas/padre.html' %}
+
+{%load static%}
+
+{% block contenidoquecambia %}
+<center>
+<form method="post">{% csrf_token %}
+    <b>¿Estás seguro que deseas borrar la película "{{ object.mas_vistas }}"?</b>
+    <br>
+    <input type="submit" value="Eliminar"/>
+</form>
+</center>
+ {% endblock %} 
